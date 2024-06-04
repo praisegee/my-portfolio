@@ -1,0 +1,8 @@
+:root {
+  --background-color: #000;
+  --component-bg-color: #201f2e;
+  --component-border: 1px solid #7d7e7c;
+  --important-text-color: #fcfbfb;
+  --less-important-text: #ccc4c4;
+  --box-shadow: 1px 1px 6px 1px rgba(150, 146, 146, 0.6);
+}

@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Seymour+One&display=swap");
+
+:root {
+  --background-color: #eee;
+  --component-bg-color: #fff;
+  --component-border: 1px solid #737466;
+  --important-text-color: #333;
+  --less-important-text: #646464;
+  --box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  /* overflow-x: hidden; */
+  color: var(--important-text-color);
+
+  /* background color depending on the display mode */
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 2rem auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: 1fr 1.4fr 1fr;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.main {
+  margin: 4rem 0;
+}
+
+.component {
+  color: var(--less-important-text);
+  background-color: var(--component-bg-color);
+  border: var(--component-border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.profile,
+.info {
+  align-self: start;
+}
+
+.fa-brands,
+.fa-solid,
+.fa-regular {
+  font-size: 2.4rem;
+  color: var(--important-text-color);
+}
+
+.fa-brands:hover,
+.fa-solid:hover,
+.fa-regular:hover {
+  color: var(--less-important-text);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.contact-list {
+  display: flex;
+}
+
+.contact-item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-left: 1.2rem;
+}
+
+.experience {
+  grid-column: 2 / 3;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 1.3rem;
+}
+
+.work {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.work span {
+  font-weight: 600;
+}
+
+.profile-img--container {
+  max-width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  /* border: 1px solid #555; */
+  /* border-bottom: 1px solid #555; */
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.profile-img {
+  max-width: 26rem;
+
+  /* overflow: hidden; */
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 1.2rem;
+  color: var(--important-text-color);
+}
+
+.skill-set {
+  list-style: none;
+  font-size: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.skill-set li {
+  margin-bottom: 1.6rem;
+}
+
+.skill-set li::before {
+  content: "⦿ ";
+}
+
+.profession {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--less-important-text);
+}
+
+.footer {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 59em) {
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 44em) {
+  .grid--3-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid--2-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
