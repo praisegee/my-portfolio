@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Seymour+One&display=swap");
 
-:root {
-  --background-color: #eee;
-  --component-bg-color: #fff;
-  --component-border: 1px solid #737466;
-  --important-text-color: #333;
-  --less-important-text: #646464;
-  --box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.4);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +17,7 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1;
-  /* overflow-x: hidden; */
+  position: relative;
   color: var(--important-text-color);
 
   /* background color depending on the display mode */
@@ -202,6 +193,23 @@ a {
   font-size: 2.4rem;
   font-weight: 600;
   color: var(--less-important-text);
+}
+
+.mode {
+  cursor: pointer;
+  font-size: 3.4rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--important-text-color);
+  background-color: var(--component-bg-color);
+  border: var(--component-border);
+}
+
+.hidden {
+  display: none !important;
 }
 
 .footer {
