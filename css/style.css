@@ -199,17 +199,13 @@ a {
   cursor: pointer;
   font-size: 3.4rem;
   position: fixed;
-  bottom: 0.4rem;
-  right: 0.4rem;
+  bottom: 1rem;
+  right: 1rem;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   color: var(--important-text-color);
   background-color: var(--component-bg-color);
   border: var(--component-border);
-}
-
-.hidden {
-  display: none !important;
 }
 
 .footer {
